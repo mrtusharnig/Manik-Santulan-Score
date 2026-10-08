@@ -10,7 +10,7 @@ model = joblib.load('Mental_Health_Model.pkl')
 
 app = FastAPI()
 
-app.data_middleware(
+app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
     allow_methods=["*"],
